@@ -1,42 +1,16 @@
-provider "kubernetes" {
-  config_path = "~/.kube/free-k8s-config"
+data "oci_containerengine_node_pool" "k8s_arm_np" {
+  node_pool_id = var.arm_node_pool_id
 }
 
-provider "oci" {
-  region = var.region
-}
-
-resource "kubernetes_namespace" "free_namespace" {
-  metadata {
-    name = "free-ns"
-  }
-}
-
-resource "kubernetes_service" "nginx_service" {
-  metadata {
-    name      = "nginx-service"
-    namespace = kubernetes_namespace.free_namespace.id
-  }
-  spec {
-    selector = {
-      app = "nginx"
-    }
-    port {
-      port        = 80
-      target_port = 80
-      node_port   = 31600
-    }
-
-    type = "NodePort"
-  }
-}
-
-data "oci_containerengine_node_pool" "free_k8s_np" {
-  node_pool_id = var.node_pool_id
-}
+# data "oci_containerengine_node_pool" "k8s_amd_np" {
+#   node_pool_id = var.amd_node_pool_id
+# }
 
 locals {
-  active_nodes = [for node in data.oci_containerengine_node_pool.free_k8s_np.nodes : node if node.state == "ACTIVE"]
+  active_nodes = [for node in data.oci_containerengine_node_pool.k8s_arm_np.nodes : node if node.state == "ACTIVE"]
+  # active_arm_nodes = [for node in data.oci_containerengine_node_pool.k8s_arm_np.nodes : node if node.state == "ACTIVE"]
+  # active_amd_nodes = [for node in data.oci_containerengine_node_pool.k8s_amd_np.nodes : node if node.state == "ACTIVE"]
+  # active_nodes = merge(active_arm_nodes, active_amd_nodes)
 }
 
 resource "oci_network_load_balancer_network_load_balancer" "free_nlb" {
