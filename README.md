@@ -1,3 +1,17 @@
+---
+maintainer: @mortench3000
+---
+
+# Free Kubernetes cluster on Oracle Cloud with Terraform - Eficode modifications
+
+This repository serves as a working improvement over the original great work done by Arnold as described below. While the original repository was supporting a short series of blog post, the ambition is now to take it a bit further and improve it with automation and adding monitoring and applications to the cluster.
+
+The purpose is also to have a cheap, or even free, playground  for both Kubernetes and Terraform by exploring and exploiting the Oracle Cloud Free Tier.
+
+Since the repository has been restructured by at least splitting Terraform into smaller modules, the aim is not necessarily to deliver changes back to the originial.
+
+You are welcome to contribute by creating issues and/or Pull Requests.
+
 # Free Kubernetes cluster on Oracle Cloud with Terraform
 
 The repository contains a Terraform script for creating a fully functioning
