@@ -18,7 +18,7 @@ variable "arm_node_pool_id" {
   description = "The OCID of the Node Pools where the (free) ARM64 compute instances reside"
 }
 
-variable "amd_node_pool_id" {
-  type = string
-  description = "The OCID of the Node Pool where the (non-free) AMD64 compute instances reside"
-}
+# variable "amd_node_pool_id" {
+#   type = string
+#   description = "The OCID of the Node Pool where the (non-free) AMD64 compute instances reside"
+# }
