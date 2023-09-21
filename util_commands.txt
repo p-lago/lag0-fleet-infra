@@ -1,0 +1,7 @@
+force reconcile: flux reconcile ks flux-system --with-source
+
+create git repo sync yaml:
+flux create source git podinfo --namespace=personal --url=https://github.com/stefanprodan/podinfo --branch=main --export > sync-podinfo.yaml
+
+create kustomization yaml fro repo sync:
+flux create kustomization podinfo --namespace=personal --source=GitRepository/podinfo --path="./" --export > sync-podinfo.yaml
