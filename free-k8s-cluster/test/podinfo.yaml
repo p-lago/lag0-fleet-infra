@@ -5,7 +5,7 @@ metadata:
   name: podinfo
   namespace: personal
 spec:
-  interval: 5m0s
+  interval: 15m0s
   url: https://github.com/priyanka-ravi/podinfo-deploy
   ref:
     branch: main
@@ -16,7 +16,7 @@ metadata:
   name: podinfo
   namespace: personal
 spec:
-  interval: 1m0s
+  interval: 10m0s
   path: ./
   prune: false
   sourceRef:
