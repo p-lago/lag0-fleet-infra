@@ -39,3 +39,6 @@ provider "helm" {
   config_path = "~/.kube/free-k8s-config"
   }
 }
+provider "k8s" {
+  # requires no configuration
+}
