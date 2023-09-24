@@ -8,17 +8,20 @@ resource "k8s_external_secrets_io_cluster_secret_store_v1alpha1" "minimal" {
         region = var.region
         vault  = "Pessoal"
       }
-      # auth = {
-      #   secret_ref = {
-      #     fingerprint = var.fingerprint
-      #     privateKey = {
-      #       key = "RadarVoluntario"
-      #       name = ".dockerconfigjson"
-      #     }
-      #   }
-      #   tenancy = "antoniolago"
-      #   user = var.user_ocid
-      # }
+      auth = {
+        secret_ref = {
+          fingerprint = {
+            key = "vault-fingerprint"
+            name = ".dockerconfigjson"
+          }
+          privateKey = {
+            key = "RadarVoluntario"
+            name = ".dockerconfigjson"
+          }
+        }
+        tenancy = "antoniolago"
+        user = var.user_ocid
+      }
     }
   }
 }
