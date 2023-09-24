@@ -7,6 +7,18 @@ variable "region" {
   type        = string
   description = "The region to provision the resources in"
 }
+variable "user_ocid" {
+  type        = string
+  description = "The user's OCID"
+}
+variable "fingerprint" {
+  type        = string
+  description = "API key's fingerprint"
+}
+variable "private_key" {
+  type        = string
+  description = "The PEM private key"
+}
 
 variable "public_subnet_id" {
   type = string
