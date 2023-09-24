@@ -6,12 +6,15 @@ resource "k8s_external_secrets_io_secret_store_v1alpha1" "minimal" {
     provider = {
         oracle = {
             region = var.region
-            vault = "vault-pessoal"
+            vault = "Pessoal"
         }
         auth = {
             secret_ref = {
                 fingerprint = var.fingerprint
-                privateKey = var.ssh_private_key
+                privateKey = {
+                    key = "RadarVoluntario"
+                    name = ".dockerconfigjson"
+                }
             }
             tenancy = "antoniolago"
             user = var.user_ocid
