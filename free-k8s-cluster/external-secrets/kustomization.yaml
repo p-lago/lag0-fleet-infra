@@ -4,3 +4,4 @@ namespace: external-secrets
 resources:
 - external-secrets.yaml
 - external-secrets-store.yaml
+- rbac.yaml
