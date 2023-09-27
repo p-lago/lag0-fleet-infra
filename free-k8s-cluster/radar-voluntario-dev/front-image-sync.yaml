@@ -21,25 +21,25 @@ spec:
   policy:
     semver:
      range: '>= 0.0.0'
----
-apiVersion: image.toolkit.fluxcd.io/v1beta1
-kind: ImageUpdateAutomation
-metadata:
-  name: radar-voluntario-front-img-update-auto
-  namespace: flux-system
-spec:
-  interval: 5m
-  sourceRef:
-    kind: GitRepository
-    name: radar-voluntario-dev-git
-    namespace: radar-voluntario-dev
-  git:
-    commit:
-      author:
-        name: Fluxbot
-        email: flux@example.com
-    checkout:
-      ref:
-        branch: dev
-    push:
-      branch: auto
+# ---
+# apiVersion: image.toolkit.fluxcd.io/v1beta1
+# kind: ImageUpdateAutomation
+# metadata:
+#   name: radar-voluntario-front-img-update-auto
+#   namespace: flux-system
+# spec:
+#   interval: 5m
+#   sourceRef:
+#     kind: GitRepository
+#     name: radar-voluntario-dev-git
+#     namespace: radar-voluntario-dev
+#   git:
+#     commit:
+#       author:
+#         name: Fluxbot
+#         email: flux@example.com
+#     checkout:
+#       ref:
+#         branch: dev
+#     push:
+#       branch: auto
