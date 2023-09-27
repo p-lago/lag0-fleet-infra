@@ -8,7 +8,7 @@ spec:
   image: ghcr.io/antoniolago/radar-voluntario-front
   interval: 1m
 ---
-apiVersion: image.toolkit.fluxcd.io/v1alpha1
+apiVersion: image.toolkit.fluxcd.io/v1beta2
 kind: ImagePolicy
 metadata:
   name: radar-voluntario-front-img-policy
@@ -18,9 +18,9 @@ spec:
     name: radar-voluntario-front-img-repo
   filterTags:
     pattern: '.*-dev.*'
-  # policy:
-  #   semver:
-  #     range: '^1.x-0'
+  policy:
+    semver:
+     range: '>= 0.0.0'
 ---
 apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImageUpdateAutomation
@@ -34,6 +34,10 @@ spec:
     name: radar-voluntario-dev-git
     namespace: radar-voluntario-dev
   git:
+    commit:
+      author:
+        name: Fluxbot
+        email: flux@example.com
     checkout:
       ref:
         branch: dev
