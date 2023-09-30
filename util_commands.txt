@@ -5,3 +5,5 @@ flux create source git podinfo --namespace=personal --url=https://github.com/ste
 
 create kustomization yaml fro repo sync:
 flux create kustomization podinfo --namespace=personal --source=GitRepository/podinfo --path="./" --export > sync-podinfo.yaml
+
+kubectl port-forward svc/ww-gitops-weave-gitops -n flux-system 9001:9001
