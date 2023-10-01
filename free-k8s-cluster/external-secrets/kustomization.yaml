@@ -4,10 +4,4 @@ namespace: external-secrets
 resources:
 - vaults/pessoal/cluster-external-secrets-store.yaml
 - vaults/pessoal/cluster-external-secrets.yaml
----
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-namespace: radar-voluntario-dev
-resources:
-- vaults/radar-voluntario-dev/external-secrets-store.yaml
-- vaults/radar-voluntario-dev/external-secrets.yaml
+- vaults/radar-voluntario-dev/
