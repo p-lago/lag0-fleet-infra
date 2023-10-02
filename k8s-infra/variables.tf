@@ -15,10 +15,10 @@ variable "fingerprint" {
   type        = string
   description = "API key's fingerprint"
 }
-variable "private_key" {
-  type        = string
-  description = "The PEM private key"
-}
+# variable "private_key" {
+#   type        = string
+#   description = "The PEM private key"
+# }
 
 variable "public_subnet_id" {
   type = string

@@ -5,4 +5,8 @@ terraform {
       version = "5.13.0"
     }
   }
+  backend "http" {
+    address = var.object_storage_uri
+    update_method = "PUT"
+  }
 }

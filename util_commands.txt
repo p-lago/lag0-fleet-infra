@@ -7,3 +7,9 @@ create kustomization yaml fro repo sync:
 flux create kustomization podinfo --namespace=personal --source=GitRepository/podinfo --path="./" --export > sync-podinfo.yaml
 
 kubectl port-forward svc/ww-gitops-weave-gitops -n flux-system 9001:9001
+
+
+# refreshes tf lock files
+terraform providers lock 
+# refreshes tf state with cached entities
+terraform refresh
