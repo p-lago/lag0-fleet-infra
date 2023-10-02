@@ -32,13 +32,13 @@ resource "oci_containerengine_node_pool" "k8s_arm_node_pool" {
         subnet_id           = oci_core_subnet.vcn_private_subnet.id
       }
     }
-    size = 3
+    size = 2
   }
   node_shape = "VM.Standard.A1.Flex"
 
   node_shape_config {
-    memory_in_gbs = 8
-    ocpus         = 1
+    memory_in_gbs = 12
+    ocpus         = 2
   }
 
   node_source_details {
