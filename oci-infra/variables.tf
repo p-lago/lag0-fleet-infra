@@ -34,7 +34,7 @@ variable "tenancy_ocid" {
   type        = string
   description = "Tenancy OCID"
 }
-variable "object_storage_uri" {
-  type        = string
-  description = "Object Storage pre authenticated request"
-}
+# variable "object_storage_uri" {
+#   type        = string
+#   description = "Object Storage pre authenticated request"
+# }
