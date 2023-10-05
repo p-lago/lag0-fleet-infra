@@ -5,3 +5,14 @@ resources:
 - vaults/pessoal/cluster-external-secrets-store.yaml
 - vaults/pessoal/cluster-external-secrets.yaml
 - vaults/radar-voluntario-dev/
+- namespace.yaml
+- secret-token.yaml
+
+# Deploy the repositories
+- repositories.yaml
+
+# Deploy the CRDs
+- deployment-crds.yaml
+
+# Deploy the operator
+- deployment.yaml
