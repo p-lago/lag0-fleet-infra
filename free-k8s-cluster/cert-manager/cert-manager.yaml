@@ -31,7 +31,7 @@ spec:
         kind: HelmRepository
         name: cert-manager
         namespace: cert-manager
-      interval: 10h
+      interval: 12h
   values:
     installCRDs: true
     extraArgs: {--dns01-recursive-nameservers=8.8.8.8:53\,1.1.1.1:53}
