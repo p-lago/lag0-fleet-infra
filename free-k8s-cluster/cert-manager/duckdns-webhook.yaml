@@ -2,7 +2,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
-  name: cert-manager-webhook-duckdns
+  name: cert-manager-webhook-duckdns-repo
   namespace: cert-manager
 spec:
   interval: 24h
@@ -20,7 +20,7 @@ spec:
       chart: cert-manager-webhook-duckdns
       sourceRef:
         kind: HelmRepository
-        name: cert-manager-webhook-duckdns
+        name: cert-manager-webhook-duckdns-repo
         namespace: cert-manager
       interval: 12h
   values:
