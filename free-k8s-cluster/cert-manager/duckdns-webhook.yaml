@@ -6,7 +6,7 @@ metadata:
   namespace: cert-manager
 spec:
   interval: 24h
-  url: https://ebrianne.github.io/cert-manager-webhook-duckdns
+  url: https://ebrianne.github.io/helm-charts
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
