@@ -7,4 +7,4 @@ resources:
 # - duckdns-webhook.yaml
 - clusterissuer-staging.yaml
 - namespace.yaml
-- radar-voluntario-certificate.yaml
+# - radar-voluntario-certificate.yaml
