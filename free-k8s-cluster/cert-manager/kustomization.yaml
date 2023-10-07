@@ -3,5 +3,6 @@ kind: Kustomization
 namespace: cert-manager
 resources:
 - cert-manager.yaml
-- duckdns-webhook.yaml
+- cert-manager-webhook-oci.yaml
+# - duckdns-webhook.yaml
 - namespace.yaml
