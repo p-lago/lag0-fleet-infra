@@ -5,4 +5,5 @@ resources:
 - cert-manager.yaml
 - cert-manager-webhook-oci.yaml
 # - duckdns-webhook.yaml
+- clusterissuer-staging.yaml
 - namespace.yaml
