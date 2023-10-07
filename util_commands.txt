@@ -13,3 +13,6 @@ kubectl port-forward svc/ww-gitops-weave-gitops -n flux-system 9001:9001
 terraform providers lock 
 # refreshes tf state with cached entities
 terraform refresh
+
+#DELETE CERT-MANAGER
+kubectl get namespace cert-manager -o json > cert-manager.json && sed -i -e s/"kubernetes"// cert-manager.json && kubectl replace --raw "/api/v1/namespaces/cert-manager/finalize" -f ./cert-manager.json
