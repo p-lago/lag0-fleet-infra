@@ -5,7 +5,7 @@ metadata:
   name: radar-voluntario-front-img-repo
   namespace: flux-system
 spec:
-  image: ghcr.io/antoniolago/radar-voluntario-front
+  image: ghcr.io/antoniolago/radar-voluntario-frontend
   interval: 1m
 ---
 apiVersion: image.toolkit.fluxcd.io/v1beta2
