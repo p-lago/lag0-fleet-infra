@@ -18,7 +18,7 @@ spec:
     name: radar-voluntario-front-img-repo
   filterTags:
     # pattern: '.*'
-    pattern: '^dev-[a-f0-9]+-(?P<ts>[0-9]+)'
+    pattern: '^dev-[a-z0-9]+-(?P<ts>[0-9]+)'
     extract: '$ts'
   policy:
     alphabetical:
