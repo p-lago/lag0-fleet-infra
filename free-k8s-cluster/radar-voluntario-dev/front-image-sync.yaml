@@ -28,6 +28,7 @@ metadata:
   name: radar-voluntario-front-img-update-auto
   namespace: flux-system
 spec:
+  suspend: true
   interval: 5m
   sourceRef:
     kind: GitRepository
