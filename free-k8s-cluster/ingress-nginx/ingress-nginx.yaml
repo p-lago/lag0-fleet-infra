@@ -17,6 +17,8 @@ metadata:
 spec:
   releaseName: ingress-nginx
   targetNamespace: ingress-nginx
+  install:
+    createNamespace: true
   interval: 30m
   chart:
     spec:
