@@ -31,6 +31,9 @@ spec:
       interval: 12h
   values:
     installCRDs: true
-    service.annotations.service.beta.kubernetes.io/oci-load-balancer-shape: flexible 
-    service.annotations.service.beta.kubernetes.io/oci-load-balancer-shape-flex-min: 10
-    service.annotations.service.beta.kubernetes.io/oci-load-balancer-shape-flex-max: 10
+    controller:
+      service:
+        annotations:
+          - service.beta.kubernetes.io/oci-load-balancer-shape: flexible
+          - service.beta.kubernetes.io/oci-load-balancer-shape-flex-min: 10
+          - service.beta.kubernetes.io/oci-load-balancer-shape-flex-max: 10
