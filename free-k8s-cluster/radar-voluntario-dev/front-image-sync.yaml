@@ -17,7 +17,7 @@ spec:
   imageRepositoryRef:
     name: radar-voluntario-front-img-repo
   filterTags:
-    pattern: '.*-dev.*'
+    pattern: '.*'
   policy:
     alphabetical:
       order: desc
