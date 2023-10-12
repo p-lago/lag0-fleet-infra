@@ -23,8 +23,8 @@ spec:
   chart:
     spec:
       chart: prometheus-community/kube-prometheus-stack
-      valuesFiles: 
-        - ./prometheus.yaml
+      # valuesFiles: 
+      #   - ./prometheus.yaml
       sourceRef:
         kind: HelmRepository
         name: prometheus
