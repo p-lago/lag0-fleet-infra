@@ -23,18 +23,8 @@ spec:
   chart:
     spec:
       chart: kube-prometheus-stack
-      # valuesFiles: 
-      #   - ./prometheus.yaml
       sourceRef:
         kind: HelmRepository
         name: prometheus
         namespace: monitoring
       interval: 12h
-  # values:
-  #   installCRDs: true
-  #   controller:
-  #     service:
-  #       annotations:
-  #         service.beta.kubernetes.io/oci-load-balancer-shape: flexible
-  #         service.beta.kubernetes.io/oci-load-balancer-shape-flex-min: 10
-  #         service.beta.kubernetes.io/oci-load-balancer-shape-flex-max: 10
