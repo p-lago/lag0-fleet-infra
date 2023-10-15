@@ -24,45 +24,45 @@ spec:
   policy:
     alphabetical:
       order: asc
----
-apiVersion: image.toolkit.fluxcd.io/v1beta1
-kind: ImageUpdateAutomation
-metadata:
-  name: radar-voluntario-back-img-update-auto
-  namespace: flux-system
-spec:
-  # suspend: true
-  interval: 5m
-  sourceRef:
-    kind: GitRepository
-    name: radar-voluntario-dev-git
-    namespace: radar-voluntario-dev
-  git:
-    commit:
-      messageTemplate: |
-        Atualização nova imagem backend
+# ---
+# apiVersion: image.toolkit.fluxcd.io/v1beta1
+# kind: ImageUpdateAutomation
+# metadata:
+#   name: radar-voluntario-back-img-update-auto
+#   namespace: flux-system
+# spec:
+#   # suspend: true
+#   interval: 5m
+#   sourceRef:
+#     kind: GitRepository
+#     name: radar-voluntario-dev-git
+#     namespace: radar-voluntario-dev
+#   git:
+#     commit:
+#       messageTemplate: |
+#         Atualização nova imagem backend
 
-        Automation name: {{ .AutomationObject }}
+#         Automation name: {{ .AutomationObject }}
 
-        Files:
-        {{ range $filename, $_ := .Updated.Files -}}
-        - {{ $filename }}
-        {{ end -}}
+#         Files:
+#         {{ range $filename, $_ := .Updated.Files -}}
+#         - {{ $filename }}
+#         {{ end -}}
 
-        Objects:
-        {{ range $resource, $_ := .Updated.Objects -}}
-        - {{ $resource.Kind }} {{ $resource.Name }}
-        {{ end -}}
+#         Objects:
+#         {{ range $resource, $_ := .Updated.Objects -}}
+#         - {{ $resource.Kind }} {{ $resource.Name }}
+#         {{ end -}}
 
-        Images:
-        {{ range .Updated.Images -}}
-        - {{.}}
-        {{ end -}}
-      author:
-        name: Fluxbot
-        email: flux@example.com
-    checkout:
-      ref:
-        branch: dev
-    push:
-      branch: dev
+#         Images:
+#         {{ range .Updated.Images -}}
+#         - {{.}}
+#         {{ end -}}
+#       author:
+#         name: Fluxbot
+#         email: flux@example.com
+#     checkout:
+#       ref:
+#         branch: dev
+#     push:
+#       branch: dev
