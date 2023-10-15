@@ -5,3 +5,4 @@ resources:
 - back-image-sync.yaml
 - rbac-dev.yaml
 - sync-repo-manifests.yaml
+- repo-image-update.yaml
