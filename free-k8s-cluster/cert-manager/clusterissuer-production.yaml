@@ -1,7 +1,7 @@
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:
-  name: letsencrypt-production
+  name: letsencrypt-productionn
 spec:
   acme:
     # The ACME server URL
@@ -12,7 +12,7 @@ spec:
 
     # Name of a secret used to store the ACME account private key
     privateKeySecretRef:
-      name: letsencrypt-production
+      name: letsencrypt-productionn
     solvers:
       - http01:
           ingress:
