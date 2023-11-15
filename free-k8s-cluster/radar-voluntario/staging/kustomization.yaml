@@ -4,5 +4,5 @@ resources:
 - front-image-policy.yaml
 - back-image-policy.yaml
 - rbac.yaml
-- git-repostiory.yaml
+- git-repository.yaml
 - image-update-automation.yaml
