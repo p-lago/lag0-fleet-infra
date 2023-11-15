@@ -1,7 +1,7 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: radar-voluntario-development-kustomization
+  name: radar-voluntario-development
   namespace: flux-system
 spec:
   interval: 1m0s
