@@ -6,3 +6,4 @@ resources:
 - rbac.yaml
 - git-repository.yaml
 - image-update-automation.yaml
+- flux-kustomization.yaml
