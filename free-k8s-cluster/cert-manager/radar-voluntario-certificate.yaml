@@ -10,3 +10,43 @@ spec:
   issuerRef:
     name: letsencrypt-staging
   secretName: radarvoluntario-tls-secret-staging
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: radarvoluntario-certificate
+  namespace: radar-voluntario
+spec:
+  commonName: radarvoluntario.com
+  dnsNames:
+    - radarvoluntario.com
+  issuerRef:
+    name: letsencrypt-production
+  secretName: radarvoluntario-certificate
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: radarvoluntario-certificate
+  namespace: radar-voluntario-development
+spec:
+  commonName: radarvoluntario.com
+  dnsNames:
+    - dev.radarvoluntario.com
+  issuerRef:
+    name: letsencrypt-production
+  secretName: radarvoluntario-certificate
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: radarvoluntario-certificate
+  namespace: radar-voluntario-staging
+spec:
+  commonName: radarvoluntario.com
+  dnsNames:
+    - staging.radarvoluntario.com
+  issuerRef:
+    name: letsencrypt-production
+  secretName: radarvoluntario-certificate
+
