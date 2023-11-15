@@ -6,5 +6,6 @@ resources:
 - cert-manager-webhook-oci.yaml
 # - duckdns-webhook.yaml
 - clusterissuer-staging.yaml
+- clusterissuer-production.yaml
 - namespace.yaml
 # - radar-voluntario-certificate.yaml
