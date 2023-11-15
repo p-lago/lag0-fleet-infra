@@ -1,8 +1,8 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- front-image-sync.yaml
-- back-image-sync.yaml
+- front-image-policy.yaml
+- back-image-policy.yaml
 - rbac.yaml
 - sync-repo-manifests.yaml
 - image-update-automation.yaml
