@@ -3,15 +3,15 @@
 apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImageUpdateAutomation
 metadata:
-  name: radar-voluntario-dev-img-update-auto
+  name: radar-voluntario-img-update-auto
   namespace: flux-system
 spec:
   # suspend: true
   interval: 5m
   sourceRef:
     kind: GitRepository
-    name: radar-voluntario-dev-git
-    namespace: radar-voluntario-dev
+    name: radar-voluntario-git
+    namespace: radar-voluntario
   git:
     commit:
       messageTemplate: |
@@ -38,6 +38,6 @@ spec:
         email: flux@example.com
     checkout:
       ref:
-        branch: dev
+        branch: main
     push:
-      branch: dev
+      branch: main

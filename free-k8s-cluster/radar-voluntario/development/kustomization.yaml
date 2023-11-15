@@ -3,6 +3,6 @@ kind: Kustomization
 resources:
 - front-image-sync.yaml
 - back-image-sync.yaml
-- rbac-dev.yaml
+- rbac.yaml
 - sync-repo-manifests.yaml
-- repo-image-update.yaml
+- image-update-automation.yaml
