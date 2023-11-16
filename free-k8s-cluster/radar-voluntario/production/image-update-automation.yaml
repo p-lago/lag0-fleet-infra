@@ -11,7 +11,7 @@ spec:
   sourceRef:
     kind: GitRepository
     name: radar-voluntario-git
-    namespace: radar-voluntario
+    namespace: flux-system
   git:
     commit:
       messageTemplate: |
