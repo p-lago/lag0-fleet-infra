@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-flux-ui
+  namespace: flux-system
+spec:
+  tls:
+  - hosts:
+      - flux.radarvoluntario.com
+    secretName: sinprors-certificate
+  rules:
+  - host: flux.radarvoluntario.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: ww-gitops-weave-gitops
+            port:
+              number: 9001
+  ingressClassName: nginx
