@@ -50,3 +50,18 @@ spec:
     name: letsencrypt-production
   secretName: radarvoluntario-certificate
 
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: radarvoluntario-certificate
+  namespace: flux-system
+spec:
+  commonName: radarvoluntario.com
+  dnsNames:
+    - flux.radarvoluntario.com
+  issuerRef:
+    name: letsencrypt-production
+  secretName: radarvoluntario-certificate
+
+
