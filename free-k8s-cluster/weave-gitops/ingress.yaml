@@ -4,6 +4,7 @@ metadata:
   name: ingress-flux-ui
   namespace: flux-system
   labels:
+    kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-production
 spec:
   tls:
