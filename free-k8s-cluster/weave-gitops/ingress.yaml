@@ -3,11 +3,13 @@ kind: Ingress
 metadata:
   name: ingress-flux-ui
   namespace: flux-system
+  labels:
+    cert-manager.io/cluster-issuer: letsencrypt-production
 spec:
   tls:
   - hosts:
       - flux.radarvoluntario.com
-    secretName: sinprors-certificate
+    secretName: radarvoluntario-certificate
   rules:
   - host: flux.radarvoluntario.com
     http:
