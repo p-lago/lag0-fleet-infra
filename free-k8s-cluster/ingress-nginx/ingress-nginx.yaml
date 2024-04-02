@@ -35,7 +35,7 @@ spec:
       kind: DaemonSet
       service:
         loadBalancerIP: '150.230.72.127'
-        externalTrafficPolicy: Local
+        externalTrafficPolicy: Cluster
         annotations:
           service.beta.kubernetes.io/oci-load-balancer-shape: flexible
           service.beta.kubernetes.io/oci-load-balancer-shape-flex-min: 10
