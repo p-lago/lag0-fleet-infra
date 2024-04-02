@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
   - hosts:
-      - flux.radarvoluntario.com
-    secretName: radarvoluntario-certificate
+      - flux.lag0.com.br
+    secretName: lag0-certificate
   rules:
-  - host: flux.radarvoluntario.com
+  - host: flux.lag0.com.br
     http:
       paths:
       - path: /
