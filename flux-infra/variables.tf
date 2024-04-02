@@ -9,7 +9,7 @@ variable "github_token" {
 
 variable "repository_name" {
   type    = string
-  default = "free-k8s-oci-tf"
+  default = "lag0-oci-tf"
 }
 
 variable "repository_visibility" {
@@ -24,5 +24,5 @@ variable "branch" {
 
 variable "target_path" {
   type    = string
-  default = "free-k8s-cluster"
+  default = "lag0-cluster"
 }

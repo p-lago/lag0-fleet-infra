@@ -13,11 +13,7 @@ spec:
     # Name of a secret used to store the ACME account private key
     privateKeySecretRef:
       name: letsencrypt-staging
-
     solvers:
-      - dns01:
-          webhook:
-            groupName: acme.d-n.be
-            solverName: oci
-            config:
-              ociProfileSecretName: oracle-secret
+      - http01:
+          ingress:
+            class: nginx

@@ -22,7 +22,7 @@ data "oci_core_images" "latest_arm64_image" {
 resource "oci_containerengine_node_pool" "k8s_arm_node_pool" {
   cluster_id         = oci_containerengine_cluster.k8s_cluster.id
   compartment_id     = var.compartment_id
-  kubernetes_version = "v1.27.2"
+  kubernetes_version = "v1.29.1"
   name               = "k8s-arm_node-pool"
   node_config_details {
     dynamic placement_configs {
@@ -32,13 +32,13 @@ resource "oci_containerengine_node_pool" "k8s_arm_node_pool" {
         subnet_id           = oci_core_subnet.vcn_private_subnet.id
       }
     }
-    size = 3
+    size = 1
   }
   node_shape = "VM.Standard.A1.Flex"
 
   node_shape_config {
-    memory_in_gbs = 12
-    ocpus         = 2
+    memory_in_gbs = 24
+    ocpus         = 4
   }
 
   node_source_details {
@@ -48,7 +48,7 @@ resource "oci_containerengine_node_pool" "k8s_arm_node_pool" {
 
   initial_node_labels {
     key   = "name"
-    value = "free-k8s-cluster"
+    value = "lag0-cluster"
   }
 }
 
