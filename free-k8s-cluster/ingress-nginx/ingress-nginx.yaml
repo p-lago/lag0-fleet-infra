@@ -33,7 +33,7 @@ spec:
     installCRDs: true
     controller:
       kind: DaemonSet
-      loadBalancerIP: '150.230.92.172'
+      loadBalancerIP: '129.148.59.225'
       externalTrafficPolicy: Local
       service:
         annotations:
