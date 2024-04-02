@@ -32,6 +32,9 @@ spec:
   values:
     installCRDs: true
     controller:
+      kind: DaemonSet
+      loadBalancerIP: '150.230.92.172'
+      externalTrafficPolicy: Local
       service:
         annotations:
           service.beta.kubernetes.io/oci-load-balancer-shape: flexible
