@@ -15,7 +15,7 @@ metadata:
   namespace: nfs
 spec:
   releaseName: my-release
-  targetNamespace: nfs-server
+  targetNamespace: nfs
   install:
     createNamespace: true
   interval: 30m
