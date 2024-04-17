@@ -15,7 +15,7 @@ metadata:
   namespace: nfs
 spec:
   releaseName: my-release
-  targetNamespace: nfs-ganesha-server-and-external-provisioner
+  targetNamespace: nfs-server
   install:
     createNamespace: true
   interval: 30m
