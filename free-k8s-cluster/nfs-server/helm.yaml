@@ -1,0 +1,36 @@
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: nfs-ganesha-server-and-external-provisioner
+  namespace: nfs
+spec:
+  interval: 24h
+  url: https://kubernetes-sigs.github.io/nfs-ganesha-server-and-external-provisioner/
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: nfs-server
+  namespace: nfs
+spec:
+  releaseName: my-release
+  targetNamespace: nfs-ganesha-server-and-external-provisioner
+  install:
+    createNamespace: true
+  interval: 30m
+  chart:
+    spec:
+      chart: nfs-server-provisioner
+      sourceRef:
+        kind: HelmRepository
+        name: nfs-server
+        namespace: nfs-ganesha-server-and-external-provisioner
+      interval: 12h
+  values:
+    persistence:
+      enabled: true
+      existingClaim: "nfs-pvc"
+
+    storageClass:
+      create: false
