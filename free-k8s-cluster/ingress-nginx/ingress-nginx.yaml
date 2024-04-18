@@ -42,4 +42,4 @@ spec:
           service.beta.kubernetes.io/oci-load-balancer-tls-secret: lag0-certificate
           service.beta.kubernetes.io/oci-load-balancer-backend-protocol: "TCP"
     tcp:
-      22: sftp/sftp-server:22
+      "22": sftp/sftp-server:22
