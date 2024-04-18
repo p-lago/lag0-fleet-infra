@@ -1,27 +1,27 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: ingress-flux-ui
-  namespace: flux-system
-  annotations:
-    kubernetes.io/ingress.class: nginx
-    kubernetes.io/ingress.allow-http: "true"
-    acme.cert-manager.io/http01-edit-in-place: "true"
-    cert-manager.io/cluster-issuer: letsencrypt-production
-spec:
-  tls:
-  - hosts:
-      - flux.lag0.com.br
-    secretName: lag0-certificate
-  rules:
-  - host: flux.lag0.com.br
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: ww-gitops-weave-gitops
-            port:
-              number: 9001
-  ingressClassName: nginx
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: ingress-flux-ui
+#   namespace: flux-system
+#   annotations:
+#     kubernetes.io/ingress.class: nginx
+#     kubernetes.io/ingress.allow-http: "true"
+#     acme.cert-manager.io/http01-edit-in-place: "true"
+#     cert-manager.io/cluster-issuer: letsencrypt-production
+# spec:
+#   tls:
+#   - hosts:
+#       - flux.lag0.com.br
+#     secretName: lag0-certificate
+#   rules:
+#   - host: flux.lag0.com.br
+#     http:
+#       paths:
+#       - path: /
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: ww-gitops-weave-gitops
+#             port:
+#               number: 9001
+#   ingressClassName: nginx
