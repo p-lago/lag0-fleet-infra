@@ -13,7 +13,6 @@ kind: HelmRelease
 metadata:
   name: ingress-nginx
   namespace: ingress-nginx
-
 spec:
   releaseName: ingress-nginx
   targetNamespace: ingress-nginx
@@ -42,3 +41,13 @@ spec:
           service.beta.kubernetes.io/oci-load-balancer-shape-flex-max: 10
           service.beta.kubernetes.io/oci-load-balancer-tls-secret: lag0-certificate
           service.beta.kubernetes.io/oci-load-balancer-backend-protocol: "TCP"
+      ports:
+        http: 80
+        https: 443
+        sftp: 22
+      targetPorts:
+        http: http
+        https: https
+        sftp: sftp
+    tcp:
+      22: sftp/sftp-server:22
