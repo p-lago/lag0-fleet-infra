@@ -34,11 +34,10 @@ spec:
       kind: DaemonSet
       service:
         loadBalancerIP: '150.230.72.127'
-        externalTrafficPolicy: Local
         annotations:
           service.beta.kubernetes.io/oci-load-balancer-shape: flexible
           service.beta.kubernetes.io/oci-load-balancer-shape-flex-min: 10
           service.beta.kubernetes.io/oci-load-balancer-shape-flex-max: 10
           service.beta.kubernetes.io/oci-load-balancer-backend-protocol: "TCP"
-    tcp:
-      "22": sftp/sftp-server:22
+    # tcp:
+    #   "22": sftp/sftp-server:22
