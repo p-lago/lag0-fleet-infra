@@ -10,7 +10,7 @@ spec:
   tls:
   - hosts:
       - grafana.lag0.com.br
-    secretName: lag0-certificate
+    secretName: lag0-grafana-certificate
   rules:
   - host: grafana.lag0.com.br
     http:
