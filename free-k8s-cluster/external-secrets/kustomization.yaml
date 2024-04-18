@@ -4,6 +4,7 @@ namespace: external-secrets
 resources:
 - vaults/pessoal/cluster-external-secrets-store.yaml
 - vaults/pessoal/cluster-external-secrets.yaml
+- vaults/pessoal/stfp-secrets.yaml
 - vaults/radar-voluntario/
 - namespace.yaml
 - secret-token.yaml
