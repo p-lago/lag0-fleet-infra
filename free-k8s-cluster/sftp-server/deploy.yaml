@@ -21,7 +21,7 @@ spec:
             claimName: sftp-server-pvc
         - name: sftp-users-config-volume
           secret:
-            secretName: users.conf
+            secretName: sftp-creds
       containers:
       - name: sftp-server
         image: atmoz/sftp
