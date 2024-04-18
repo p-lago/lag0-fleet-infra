@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: nfs-pvc
   labels:
-    app: nfs-server
+    app: nfs-server-provisioner
 spec:
   storageClassName: oci-bv
   accessModes:
