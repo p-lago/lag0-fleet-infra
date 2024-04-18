@@ -4,7 +4,7 @@ metadata:
   name: nfs-csi
 provisioner: nfs.csi.k8s.io
 parameters:
-  server: my-release-nfs-server-provisioner.nfs.svc.cluster.local
+  server: nfs-server.nfs.svc.cluster.local
   share: /
   subDir: ${pvc.metadata.name}
   # csi.storage.k8s.io/provisioner-secret is only needed for providing mountOptions in DeleteVolume
