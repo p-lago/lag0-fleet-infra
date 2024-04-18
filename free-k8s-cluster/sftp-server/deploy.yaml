@@ -24,7 +24,7 @@ spec:
             secretName: sftp-creds
       containers:
       - name: sftp-server
-        image: atmoz/sftp
+        image: jmcombs/sftp
         ports:
         - containerPort: 22
         volumeMounts:
