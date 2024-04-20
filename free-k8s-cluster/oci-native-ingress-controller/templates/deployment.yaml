@@ -72,6 +72,8 @@ spec:
               value: "sa-saopaulo-1"
             - name: OCI_SDK_DEFAULT_RETRY_ENABLED
               value: "true"
+            - name: OCI_GO_SDK_DEBUG
+              value: "d"
           ports:
             - name: webhook-server
               containerPort: 9443
