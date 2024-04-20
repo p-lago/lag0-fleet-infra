@@ -56,7 +56,7 @@ spec:
           args: 
           - --lease-lock-name=oci-native-ingress-controller
           - --lease-lock-namespace=native-ingress-controller-system
-          - --authType=user
+          - --authType=instance
           - --auth-secret-name=native-ingress-controller-creds
           - --controller-class=oci.oraclecloud.com/native-ingress-controller
           - --compartment-id=ocid1.tenancy.oc1..aaaaaaaaoecb5imn4etm67dmqojtre7m57lluyxudwmoi2cs7umwolhcxtha
