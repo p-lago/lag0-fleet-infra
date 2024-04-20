@@ -4,8 +4,8 @@ metadata:
   name: ingressparms-cr-test
   namespace: native-ingress-controller-system
 spec:
-  compartmentId: "ocid1.compartment.oc1..aaaaaaaauckenasusv5odnc4bqspi77hgnjeo6ydq33hidzadpkjxyzzz"
-  subnetId: "ocid1.subnet.oc1.iad.aaaaaaaaxaq3szzikh7cb53arlkdgbi4wz4g73qpnuqhdhqckr2d5zyyzzxx"
+  compartmentId: "ocid1.tenancy.oc1..aaaaaaaaoecb5imn4etm67dmqojtre7m57lluyxudwmoi2cs7umwolhcxtha"
+  subnetId: "ocid1.subnet.oc1.sa-saopaulo-1.aaaaaaaaquavsseio4zgq6fvw5drmrak4uqpnkip5kbrpoj5jhzdr4qpp6tq"
   loadBalancerName: "native-ic-lb"
   isPrivate: false
   maxBandwidthMbps: 10
