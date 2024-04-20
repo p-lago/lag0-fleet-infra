@@ -20,6 +20,8 @@ spec:
       - path: /
         pathType: Prefix
         backend:
-          serviceName: ww-gitops-weave-gitops
-          servicePort: 9001
+          service:
+            name: ww-gitops-weave-gitops
+            port:
+              number: 9001
   ingressClassName: default-ingress-class
