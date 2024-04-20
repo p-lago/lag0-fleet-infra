@@ -4,7 +4,7 @@ metadata:
   name: ingress-flux-ui
   namespace: flux-system
   annotations:
-    kubernetes.io/ingress.class: ingressparms-cr-test
+    kubernetes.io/ingress.class: default-ingress-class
     kubernetes.io/ingress.allow-http: "true"
     acme.cert-manager.io/http01-edit-in-place: "true"
     cert-manager.io/cluster-issuer: letsencrypt-production
@@ -24,4 +24,4 @@ spec:
             name: ww-gitops-weave-gitops
             port:
               number: 9001
-  ingressClassName: ingressparms-cr-test
+  ingressClassName: default-ingress-class
