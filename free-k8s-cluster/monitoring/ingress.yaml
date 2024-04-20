@@ -22,4 +22,3 @@ spec:
             name: prometheus-grafana
             port:
               number: 80
-  ingressClassName: nginx
