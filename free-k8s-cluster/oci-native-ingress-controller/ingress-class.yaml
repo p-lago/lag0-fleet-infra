@@ -1,0 +1,27 @@
+apiVersion: "ingress.oraclecloud.com/v1beta1"
+kind: IngressClassParameters
+metadata:
+  name: ingressparms-cr-test
+  namespace: test
+spec:
+  compartmentId: "ocid1.compartment.oc1..aaaaaaaauckenasusv5odnc4bqspi77hgnjeo6ydq33hidzadpkjxyzzz"
+  subnetId: "ocid1.subnet.oc1.iad.aaaaaaaaxaq3szzikh7cb53arlkdgbi4wz4g73qpnuqhdhqckr2d5zyyzzxx"
+  loadBalancerName: "native-ic-lb"
+  isPrivate: false
+  maxBandwidthMbps: 10
+  minBandwidthMbps: 10
+---
+apiVersion: networking.k8s.io/v1
+kind: IngressClass
+metadata:
+  name: default-ingress-class
+  annotations:
+    ingressclass.kubernetes.io/is-default-class: "true"
+spec:
+  controller: oci.oraclecloud.com/native-ingress-controller
+  parameters:
+    scope: Namespace
+    namespace: test
+    apiGroup: ingress.oraclecloud.com
+    kind: ingressclassparameters
+    name: ingressparms-cr-test
