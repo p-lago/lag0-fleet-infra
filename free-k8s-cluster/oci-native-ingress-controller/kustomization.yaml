@@ -10,5 +10,5 @@ resources:
 - templates/rbac.yaml
 - templates/service.yaml
 - templates/serviceaccount.yaml
-- templates/webhoook.yaml
+- templates/webhook.yaml
 - ingress-class.yaml
