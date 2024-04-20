@@ -4,7 +4,7 @@ metadata:
   name: ingress-monitoring
   namespace: monitoring
   annotations:
-    kubernetes.io/ingress.class: nginx
+    kubernetes.io/ingress.class: ingressparms-cr-test
     cert-manager.io/cluster-issuer: letsencrypt-production
 spec:
   tls:
@@ -22,3 +22,4 @@ spec:
             name: prometheus-grafana
             port:
               number: 80
+  ingressClassName: ingressparms-cr-test
