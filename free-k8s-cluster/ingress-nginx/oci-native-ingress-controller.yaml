@@ -6,7 +6,7 @@ metadata:
   namespace: oci-native-ingress-controller
 spec:
   interval: 24h
-  url: https://github.com/oracle/oci-native-ingress-controller/tree/main/helm/oci-native-ingress-controller
+  url: https://github.com/oracle/oci-native-ingress-controller/
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
