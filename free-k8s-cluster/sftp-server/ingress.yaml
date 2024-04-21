@@ -1,25 +1,25 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: ingress-sftp-server
-  namespace: sftp
-  annotations:
-    kubernetes.io/ingress.class: default-ingress-class
-    cert-manager.io/cluster-issuer: letsencrypt-production
-spec:
-  tls:
-  - hosts:
-      - sftp.lag0.com.br
-    secretName: lag0-sftp-certificate
-  rules:
-  - host: sftp.lag0.com.br
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: sftp-server
-            port:
-              number: 22
-  ingressClassName: default-ingress-class
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: ingress-sftp-server
+#   namespace: sftp
+#   annotations:
+#     kubernetes.io/ingress.class: default-ingress-class
+#     cert-manager.io/cluster-issuer: letsencrypt-production
+# spec:
+#   tls:
+#   - hosts:
+#       - sftp.lag0.com.br
+#     secretName: lag0-sftp-certificate
+#   rules:
+#   - host: sftp.lag0.com.br
+#     http:
+#       paths:
+#       - path: /
+#         pathType: Prefix
+#         backend:
+#           service:
+#             name: sftp-server
+#             port:
+#               number: 22
+#   ingressClassName: default-ingress-class
