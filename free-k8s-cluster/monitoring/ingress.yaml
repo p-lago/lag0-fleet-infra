@@ -5,6 +5,17 @@ metadata:
   namespace: monitoring
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
+    oci-native-ingress.oraclecloud.com/protocol: HTTP   
+    oci-native-ingress.oraclecloud.com/policy: "ROUND_ROBIN"
+    oci-native-ingress.oraclecloud.com/healthcheck-protocol:  "HTTP"     
+    oci-native-ingress.oraclecloud.com/healthcheck-port:  "9090"  
+    oci-native-ingress.oraclecloud.com/healthcheck-interval-milliseconds:  "10000" 
+    oci-native-ingress.oraclecloud.com/healthcheck-timeout-milliseconds:  "3000" 
+    oci-native-ingress.oraclecloud.com/healthcheck-retries:  "3"
+    oci-native-ingress.oraclecloud.com/healthcheck-return-code:  "200"  
+    oci-native-ingress.oraclecloud.com/healthcheck-response-regex:  ""  
+    oci-native-ingress.oraclecloud.com/healthcheck-path:  "/health"  
+    oci-native-ingress.oraclecloud.com/healthcheck-force-plaintext:  "true" 
 spec:
   tls:
   - hosts:
