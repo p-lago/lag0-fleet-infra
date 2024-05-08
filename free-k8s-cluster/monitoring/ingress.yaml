@@ -18,11 +18,6 @@ metadata:
     oci-native-ingress.oraclecloud.com/healthcheck-force-plaintext:  "true" 
     oci-native-ingress.oraclecloud.com/extract-ca-from-tls-crt: "true"
 spec:
-  defaultBackend:
-    service:
-      name: default_backend
-      port:
-        number: 8080
   tls:
   - hosts:
       - grafana.lag0.com.br
