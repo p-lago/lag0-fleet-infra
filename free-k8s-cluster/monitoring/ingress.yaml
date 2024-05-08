@@ -5,10 +5,10 @@ metadata:
   namespace: monitoring
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
-    oci-native-ingress.oraclecloud.com/protocol: HTTP2   
+    oci-native-ingress.oraclecloud.com/protocol: HTTP   
     oci-native-ingress.oraclecloud.com/policy: "ROUND_ROBIN"
-    oci-native-ingress.oraclecloud.com/healthcheck-protocol:  "TCP"     
-    oci-native-ingress.oraclecloud.com/healthcheck-port:  "80"  
+    oci-native-ingress.oraclecloud.com/healthcheck-protocol:  "HTTP"     
+    oci-native-ingress.oraclecloud.com/healthcheck-port:  "9090"  
     oci-native-ingress.oraclecloud.com/healthcheck-interval-milliseconds:  "10000" 
     oci-native-ingress.oraclecloud.com/healthcheck-timeout-milliseconds:  "3000" 
     oci-native-ingress.oraclecloud.com/healthcheck-retries:  "3"
@@ -18,6 +18,11 @@ metadata:
     oci-native-ingress.oraclecloud.com/healthcheck-force-plaintext:  "true" 
     oci-native-ingress.oraclecloud.com/extract-ca-from-tls-crt: "true"
 spec:
+  defaultBackend:
+    service:
+      name: default-backend
+      port:
+        number: 8080
   tls:
   - hosts:
       - grafana.lag0.com.br
