@@ -20,7 +20,7 @@ metadata:
 spec:
   defaultBackend:
     service:
-      name: default-backend
+      name: default_backend
       port:
         number: 8080
   tls:
