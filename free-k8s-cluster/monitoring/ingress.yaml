@@ -16,6 +16,7 @@ metadata:
     # oci-native-ingress.oraclecloud.com/healthcheck-response-regex:  ""  
     # oci-native-ingress.oraclecloud.com/healthcheck-path:  "/health"  
     # oci-native-ingress.oraclecloud.com/healthcheck-force-plaintext:  "true" 
+    oci-native-ingress.oraclecloud.com/extract-ca-from-tls-crt: "true"
 spec:
   tls:
   - hosts:
