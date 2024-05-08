@@ -5,7 +5,7 @@ metadata:
   namespace: monitoring
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
-    oci-native-ingress.oraclecloud.com/protocol: TCP   
+    oci-native-ingress.oraclecloud.com/protocol: HTTPS   
     oci-native-ingress.oraclecloud.com/policy: "ROUND_ROBIN"
     oci-native-ingress.oraclecloud.com/healthcheck-protocol:  "TCP"     
     oci-native-ingress.oraclecloud.com/healthcheck-port:  "80"  
