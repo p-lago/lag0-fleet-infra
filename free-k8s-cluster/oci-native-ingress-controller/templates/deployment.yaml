@@ -51,7 +51,7 @@ spec:
             readOnlyRootFilesystem: true
             runAsNonRoot: true
             runAsUser: 1000
-          image: "ghcr.io/antoniolago/ocinativeingresscontroller:teste"
+          image: "ghcr.io/antoniolago/ocinativeingresscontroller:test"
           imagePullPolicy: Always
           args: 
           - --lease-lock-name=oci-native-ingress-controller
