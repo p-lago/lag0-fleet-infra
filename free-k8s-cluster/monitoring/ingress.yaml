@@ -23,4 +23,4 @@ spec:
           service:
             name: prometheus-grafana
             port:
-              number: 32434
+              number: 80
