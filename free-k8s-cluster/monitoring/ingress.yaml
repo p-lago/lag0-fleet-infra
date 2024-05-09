@@ -6,11 +6,10 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
     oci-native-ingress.oraclecloud.com/protocol: HTTP
-    oci-native-ingress.oraclecloud.com/backend-tls-enabled: "true"
+    oci-native-ingress.oraclecloud.com/backend-tls-enabled: "false"
     oci-native-ingress.oraclecloud.com/extract-ca-from-tls-crt: "true"
-    oci-native-ingress.oraclecloud.com/backend-tls-enabled: "true"
     oci-native-ingress.oraclecloud.com/policy: "ROUND_ROBIN"
-    oci-native-ingress.oraclecloud.com/healthcheck-protocol:  "HTTP"     
+    oci-native-ingress.oraclecloud.com/healthcheck-protocol:  "TCP"     
     # oci-native-ingress.oraclecloud.com/healthcheck-port:  "32434"  
     oci-native-ingress.oraclecloud.com/healthcheck-interval-milliseconds:  "10000" 
     oci-native-ingress.oraclecloud.com/healthcheck-timeout-milliseconds:  "3000" 
