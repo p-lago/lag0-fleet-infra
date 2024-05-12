@@ -18,6 +18,8 @@ apiVersion: discovery.k8s.io/v1
 metadata:
   name: nextcloud
   namespace: nextcloud
+  labels:
+    kubernetes.io/service-name: "nextcloud"
 addressType: FQDN
 ports:
   - name: app
