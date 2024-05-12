@@ -28,6 +28,8 @@ ports:
 endpoints:
   - addresses:
       - "lag0.duckdns.org"
+    conditions:
+      ready: true
 ---
 kind: Ingress
 apiVersion: networking.k8s.io/v1
