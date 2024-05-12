@@ -1,0 +1,50 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: nextcloud
+  namespace: nextcloud
+spec:
+  ports:
+    - name: app
+      protocol: TCP
+      port: 9855
+      targetPort: 9855
+  clusterIP: None
+  type: ClusterIP
+  sessionAffinity: None
+---
+kind: Endpoints
+apiVersion: v1
+metadata:
+  name: nextcloud
+  namespace: nextcloud
+subsets:
+  - addresses:
+      - hostname: lag0.duckdns.org
+    ports:
+      - name: app
+        port: 9855
+        protocol: TCP
+---
+kind: Ingress
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: ingress-nextcloud
+  namespace: nextcloud
+spec:
+  tls:
+    - hosts:
+        - nextcloud.lag0.org.br
+      secretName: lag0-nextcloud-certificate
+  rules:
+    - host: nextcloud.lag0.org.br
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service: 
+                name: service-nextcloud
+                port: 
+                  number: 9855
+  ingressClassName: nginx
