@@ -9,7 +9,7 @@ spec:
       protocol: TCP
       port: 80
       targetPort: 9855
-  clusterIP: None
+  # clusterIP: None
   type: ExternalName
   sessionAffinity: None
   externalName: lag0.duckdns.org
