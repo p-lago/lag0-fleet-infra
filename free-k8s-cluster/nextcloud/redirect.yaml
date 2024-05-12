@@ -13,8 +13,8 @@ spec:
   type: ClusterIP
   sessionAffinity: None
 ---
-kind: Endpoints
-apiVersion: v1
+kind: EndpointSlice
+apiVersion: discovery.k8s.io/v1
 metadata:
   name: nextcloud
   namespace: nextcloud
