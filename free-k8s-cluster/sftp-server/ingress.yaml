@@ -4,6 +4,8 @@ metadata:
   name: ingress-sftp-server
   namespace: sftp
   annotations:
+    kubernetes.io/ingress.allow-http: "true"
+    acme.cert-manager.io/http01-edit-in-place: "true"
     cert-manager.io/cluster-issuer: letsencrypt-production
 spec:
   tls:
