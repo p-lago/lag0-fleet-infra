@@ -1,15 +1,15 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: ingress-nginx-controller
-  namespace: ingress-nginx
-data:
-  allow-snippet-annotations: "true"
-  enable-real-ip: "true"
-  real_ip_header: X-Real-IP 
-  # real_ip_recursive: "true"
-  compute-full-forwarded-for: "true"
-  # use-proxy-protocol: "true"
-  # real-ip-header: "proxy_protocol"
-  # proxy-real-ip-cidr: "10.0.0.0/20"
-  use-forwarded-headers: "true"
+# apiVersion: v1
+# kind: ConfigMap
+# metadata:
+#   name: ingress-nginx-controller
+#   namespace: ingress-nginx
+# data:
+#   allow-snippet-annotations: "true"
+#   enable-real-ip: "true"
+#   real_ip_header: X-Real-IP 
+#   # real_ip_recursive: "true"
+#   compute-full-forwarded-for: "true"
+#   # use-proxy-protocol: "true"
+#   # real-ip-header: "proxy_protocol"
+#   # proxy-real-ip-cidr: "10.0.0.0/20"
+#   use-forwarded-headers: "true"

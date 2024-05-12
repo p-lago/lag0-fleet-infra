@@ -4,4 +4,4 @@ namespace: ingress-nginx
 resources:
 - ingress-nginx.yaml
 - namespace.yaml
-- configmap.yaml
+# - configmap.yaml
