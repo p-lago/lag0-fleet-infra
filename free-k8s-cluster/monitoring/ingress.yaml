@@ -5,20 +5,6 @@ metadata:
   namespace: monitoring
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
-    oci-native-ingress.oraclecloud.com/protocol: HTTP
-    oci-native-ingress.oraclecloud.com/backend-tls-enabled: "false"
-    oci-native-ingress.oraclecloud.com/extract-ca-from-tls-crt: "true"
-    oci-native-ingress.oraclecloud.com/policy: "ROUND_ROBIN"
-    oci-native-ingress.oraclecloud.com/healthcheck-protocol:  "TCP"     
-    # oci-native-ingress.oraclecloud.com/healthcheck-port:  "32434"  
-    oci-native-ingress.oraclecloud.com/healthcheck-interval-milliseconds:  "10000" 
-    oci-native-ingress.oraclecloud.com/healthcheck-timeout-milliseconds:  "3000" 
-    oci-native-ingress.oraclecloud.com/healthcheck-retries:  "3"
-    oci-native-ingress.oraclecloud.com/healthcheck-return-code:  "200"  
-    oci-native-ingress.oraclecloud.com/healthcheck-response-regex:  ""  
-    oci-native-ingress.oraclecloud.com/healthcheck-path:  "/"  
-    oci-native-ingress.oraclecloud.com/healthcheck-force-plaintext:  "true" 
-    oci-native-ingress.oraclecloud.com/extract-ca-from-tls-crt: "true"
 spec:
   tls:
   - hosts:
@@ -35,3 +21,4 @@ spec:
             name: prometheus-grafana
             port:
               number: 443
+  ingressClassName: nginx
