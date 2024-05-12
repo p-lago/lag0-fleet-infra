@@ -18,13 +18,13 @@ apiVersion: v1
 metadata:
   name: nextcloud
   namespace: nextcloud
-subsets:
+ports:
+  - name: app
+    port: 9855
+    protocol: TCP
+endpoints:
   - addresses:
-      - hostname: lag0.duckdns.org
-    ports:
-      - name: app
-        port: 9855
-        protocol: TCP
+      - "lag0.duckdns.org"
 ---
 kind: Ingress
 apiVersion: networking.k8s.io/v1
