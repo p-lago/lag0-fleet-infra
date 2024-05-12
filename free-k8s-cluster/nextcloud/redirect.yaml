@@ -5,7 +5,7 @@ metadata:
   namespace: nextcloud
 spec:
   ports:
-    - name: app
+    - name: nextcloud
       protocol: TCP
       port: 9855
       targetPort: 9855
@@ -22,7 +22,7 @@ metadata:
     kubernetes.io/service-name: "nextcloud"
 addressType: FQDN
 ports:
-  - name: app
+  - name: nextcloud
     port: 9855
     protocol: TCP
 endpoints:
