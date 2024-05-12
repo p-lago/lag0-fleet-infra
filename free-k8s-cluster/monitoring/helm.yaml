@@ -28,6 +28,3 @@ spec:
         name: prometheus
         namespace: monitoring
       interval: 12h
-  values:
-    service:
-      type: NodePort
