@@ -10,8 +10,9 @@ spec:
       port: 80
       targetPort: 9855
   clusterIP: None
-  type: ClusterIP
+  type: ExternalName
   sessionAffinity: None
+  externalName: lag0.duckdns.org
 ---
 kind: EndpointSlice
 apiVersion: discovery.k8s.io/v1
