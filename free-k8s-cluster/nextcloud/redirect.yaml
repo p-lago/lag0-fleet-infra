@@ -10,8 +10,9 @@ spec:
       port: 80
       targetPort: 9855
   clusterIP: None
-  type: ClusterIP
+  type: ExternalName
   sessionAffinity: None
+  externalName: lag0.duckdns.org
 ---
 kind: EndpointSlice
 apiVersion: discovery.k8s.io/v1
@@ -20,14 +21,14 @@ metadata:
   namespace: nextcloud
   labels:
     kubernetes.io/service-name: "nextcloud"
-addressType: IPv4
+addressType: FQDN
 ports:
   - name: nextcloud
     port: 9855
     protocol: TCP
 endpoints:
   - addresses:
-      - 179.219.137.209
+      - "lag0.duckdns.org"
     conditions:
       ready: true
 ---
