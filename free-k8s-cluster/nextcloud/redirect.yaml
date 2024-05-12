@@ -37,10 +37,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - nextcloud.lag0.org.br
+        - nextcloud.lag0.com.br
       secretName: lag0-nextcloud-certificate
   rules:
-    - host: nextcloud.lag0.org.br
+    - host: nextcloud.lag0.com.br
       http:
         paths:
           - path: /
