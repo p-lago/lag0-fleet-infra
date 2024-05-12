@@ -7,7 +7,7 @@ spec:
   ports:
     - name: nextcloud
       protocol: TCP
-      port: 9855
+      port: 80
       targetPort: 9855
   clusterIP: None
   type: ClusterIP
@@ -30,6 +30,7 @@ endpoints:
       - "lag0.duckdns.org"
     conditions:
       ready: true
+    hostname: lag0.duckdns.org
 ---
 kind: Ingress
 apiVersion: networking.k8s.io/v1
@@ -55,5 +56,5 @@ spec:
               service: 
                 name: service-nextcloud
                 port: 
-                  number: 9855
+                  number: 80
   ingressClassName: nginx
