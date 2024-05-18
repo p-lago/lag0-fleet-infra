@@ -33,7 +33,7 @@ spec:
     controller:
       kind: DaemonSet
       service:
-        # loadBalancerIP: '144.22.159.10'
+        loadBalancerIP: '144.22.159.10'
         externalTrafficPolicy: Local
         annotations:
           oci.oraclecloud.com/load-balancer-type: "nlb"
