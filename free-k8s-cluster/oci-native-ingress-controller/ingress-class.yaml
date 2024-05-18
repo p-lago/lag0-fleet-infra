@@ -14,7 +14,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: IngressClass
 metadata:
-  name: default-ingress-class
+  name: oci-ingress-class
   annotations:
     ingressclass.kubernetes.io/is-default-class: "false"
 spec:
