@@ -9,7 +9,7 @@ spec:
   tls:
   - hosts:
       - flux.lag0.com.br
-    secretName: lag0-certificate
+    secretName: lag0-flux-certificate
   rules:
   - host: flux.lag0.com.br
     http:
@@ -22,3 +22,26 @@ spec:
             port:
               number: 9001
   ingressClassName: nginx
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-flux-ui-oci
+  namespace: flux-system
+spec:
+  tls:
+  - hosts:
+      - flux.lag0.com.br
+    secretName: lag0-flux-certificate
+  rules:
+  - host: flux.lag0.com.br
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: ingress-nginx-controller
+            port:
+              number: 443
+  ingressClassName: oci-ingress-class
