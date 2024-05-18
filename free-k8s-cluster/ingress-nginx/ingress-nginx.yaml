@@ -41,7 +41,7 @@ spec:
           # service.beta.kubernetes.io/oci-load-balancer-shape: flexible
           # service.beta.kubernetes.io/oci-load-balancer-shape-flex-min: 10
           # service.beta.kubernetes.io/oci-load-balancer-shape-flex-max: 10
-          service.beta.kubernetes.io/oci-load-balancer-security-list-management-mode: "None"
+          service.beta.kubernetes.io/oci-load-balancer-security-list-management-mode: "All"
           # service.beta.kubernetes.io/oci-load-balancer-backend-protocol: HTTP
     tcp:
       "22": sftp/sftp-server:22
