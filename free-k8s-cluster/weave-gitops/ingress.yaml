@@ -28,6 +28,8 @@ kind: Ingress
 metadata:
   name: ingress-flux-ui-oci
   namespace: flux-system
+  annotations:
+    oci-native-ingress.oraclecloud.com/extract-ca-from-tls-crt: "true"
 spec:
   tls:
   - hosts:
