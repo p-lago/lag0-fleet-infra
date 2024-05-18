@@ -5,6 +5,8 @@ metadata:
   namespace: flux-system
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-production
+    kubernetes.io/ingress.allow-http: "true"
+    acme.cert-manager.io/http01-edit-in-place: "true"
 spec:
   tls:
   - hosts:
