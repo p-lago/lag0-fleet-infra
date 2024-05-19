@@ -57,6 +57,36 @@ metadata:
   namespace: flux-system
 spec:
   type: ExternalName
-  externalName: ingress-nginx-controller.ingress-nginx.svc.cluster.local
+  externalName: ingress-nginx-external-svc.ingress-nginx.svc.cluster.local
   ports:
   - port: 443
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: ingress-nginx-external-svc
+  namespace: ingress-nginx
+spec:
+  ports:
+    - name: app
+      protocol: TCP
+      port: 443
+      targetPort: 443
+  clusterIP: None
+  type: NodePort
+  sessionAffinity: None
+---
+kind: Endpoints
+apiVersion: v1
+metadata:
+  name: service-ingress
+  namespace: ingress-nginx
+subsets:
+  - addresses:
+      - ip: 10.244.0.74
+      # - ip: 144.22.248.149
+    ports:
+      - name: app
+        port: 443
+        protocol: TCP
+---
