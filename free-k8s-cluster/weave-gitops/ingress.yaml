@@ -58,3 +58,5 @@ metadata:
 spec:
   type: ExternalName
   externalName: ingress-nginx-controller.ingress-nginx.svc.cluster.local
+  ports:
+  - port: 443
