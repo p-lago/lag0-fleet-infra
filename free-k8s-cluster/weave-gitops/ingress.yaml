@@ -72,7 +72,6 @@ spec:
       protocol: TCP
       port: 443
       targetPort: 443
-  clusterIP: None
   type: NodePort
 ---
 kind: Endpoints
