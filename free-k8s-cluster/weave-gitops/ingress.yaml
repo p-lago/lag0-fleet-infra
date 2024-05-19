@@ -45,7 +45,16 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: ingress-nginx-controller
+            name: ingress-nginx-external-svc
             port:
               number: 443
   ingressClassName: oci-ingress-class
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: ingress-nginx-external-svc
+  namespace: flux-system
+spec:
+  type: ExternalName
+  externalName: ingress-nginx-controller.ingress-nginx.svc.cluster.local
