@@ -1,0 +1,34 @@
+
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: steamcmd-zomboid
+  namespace: steamcmd-zomboid
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: steamcmd-zomboid
+  template:
+    metadata:
+      name: steamcmd-zomboid
+      namespace: nfs
+      labels:
+        app: steamcmd-zomboid
+    spec:
+      containers:
+        - name: steamcmd-zomboid
+          image: teriyakigod/steamcmd:arm64
+          # env:
+          #   - name: SHARED_DIRECTORY
+          #     value: "/exports"
+          # volumeMounts:
+          #   - name: nfs-pv
+          #     mountPath: /exports
+          securityContext:
+            privileged: true
+      # volumes:
+      #   - name: nfs-pv
+      #     persistentVolumeClaim:
+      #       claimName: nfs-pvc
