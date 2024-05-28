@@ -20,7 +20,8 @@ spec:
       containers:
         - name: steamcmd-zomboid
           image: sonroyaalmerol/steamcmd-arm64:latest
-          command: ["tail -f /dev/null"]
+          command: ["tail"]
+          args: ["-f","/dev/null"]
           # env:
           #   - name: SHARED_DIRECTORY
           #     value: "/exports"
