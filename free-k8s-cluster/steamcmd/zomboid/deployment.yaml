@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: steamcmd-zomboid
-          image: teriyakigod/steamcmd:arm64
+          image: sonroyaalmerol/steamcmd-arm64:steam
           # env:
           #   - name: SHARED_DIRECTORY
           #     value: "/exports"
