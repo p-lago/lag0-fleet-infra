@@ -13,13 +13,13 @@ spec:
   template:
     metadata:
       name: steamcmd-zomboid
-      namespace: nfs
+      namespace: steamcmd-zomboid
       labels:
         app: steamcmd-zomboid
     spec:
       containers:
         - name: steamcmd-zomboid
-          image: sonroyaalmerol/steamcmd-arm64:latest
+          image: sonroyaalmerol/steamcmd-arm64:steam-2024-05-12
           command: ["tail"]
           args: ["-f","/dev/null"]
           # env:
@@ -28,8 +28,8 @@ spec:
           # volumeMounts:
           #   - name: nfs-pv
           #     mountPath: /exports
-          securityContext:
-            privileged: true
+          # securityContext:
+          #   privileged: true
       # volumes:
       #   - name: nfs-pv
       #     persistentVolumeClaim:
