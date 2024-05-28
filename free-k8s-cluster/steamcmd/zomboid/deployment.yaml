@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: steamcmd-zomboid
-          image: sonroyaalmerol/steamcmd-arm64:steam-2024-05-12
+          image: sonroyaalmerol/steamcmd-arm64:latest
           command: ["tail"]
           args: ["-f","/dev/null"]
           # env:
@@ -28,8 +28,17 @@ spec:
           # volumeMounts:
           #   - name: nfs-pv
           #     mountPath: /exports
-          # securityContext:
-          #   privileged: true
+          resources:
+            limits:
+              cpu: "4"
+              memory: 12Gi
+            requests:
+              cpu: 100m
+              memory: 64Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
       # volumes:
       #   - name: nfs-pv
       #     persistentVolumeClaim:
