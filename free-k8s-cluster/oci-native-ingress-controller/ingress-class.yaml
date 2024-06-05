@@ -5,7 +5,7 @@ metadata:
   namespace: native-ingress-controller-system
 spec:
   compartmentId: ocid1.tenancy.oc1..aaaaaaaaoecb5imn4etm67dmqojtre7m57lluyxudwmoi2cs7umwolhcxtha
-  subnetId: ocid1.subnet.oc1.sa-saopaulo-1.aaaaaaaa35jiytlmp4tycxuoikxnqxuj7q4aoj22vg6xbpxnge5ntuehkara
+  subnetId: ocid1.subnet.oc1.sa-saopaulo-1.aaaaaaaaquavsseio4zgq6fvw5drmrak4uqpnkip5kbrpoj5jhzdr4qpp6tq
   loadBalancerName: "native-ic-lb"
   isPrivate: false
   maxBandwidthMbps: 10
@@ -14,9 +14,9 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: IngressClass
 metadata:
-  name: default-ingress-class
+  name: oci-ingress-class
   annotations:
-    ingressclass.kubernetes.io/is-default-class: "true"
+    ingressclass.kubernetes.io/is-default-class: "false"
 spec:
   controller: oci.oraclecloud.com/native-ingress-controller
   parameters:
