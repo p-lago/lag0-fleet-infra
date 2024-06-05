@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m0s
-  path: ./manifests/overlays/production
+  path: ./rna-algarismos-arabicos/overlays/production
   prune: true
   force: true
   sourceRef:
