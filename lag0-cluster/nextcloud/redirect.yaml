@@ -58,7 +58,7 @@ spec:
             pathType: Prefix
             backend:
               service: 
-                name: nextcloud
+                name: nextcloud-release
                 port: 
                   number: 80
   ingressClassName: nginx
