@@ -27,7 +27,7 @@ spec:
         kind: HelmRepository
         name: ingress-nginx
         namespace: ingress-nginx
-      interval: 10h
+      interval: 11h
   values:
     installCRDs: true
     controller:
