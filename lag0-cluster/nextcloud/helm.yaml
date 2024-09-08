@@ -30,8 +30,8 @@ spec:
     nextcloud:
       trustedDomains: 
         - nextcloud.lag0.com.br
-      password:
-        valueFrom:
+      # password:
+      #   valueFrom:
       configs:
         previews.config.php: |-
           <?php
