@@ -58,7 +58,7 @@ spec:
     cronjob:
       enabled: true
     internalDatabase:
-      enabled: true
+      enabled: false
     externalDatabase:
       enabled: true
     mariadb:
