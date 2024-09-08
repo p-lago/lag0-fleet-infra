@@ -61,6 +61,7 @@ spec:
       enabled: false
     externalDatabase:
       enabled: true
+      type: mysql
       existingSecret:
         enabled: true
         secretName: mysql-db
@@ -68,6 +69,7 @@ spec:
         passwordKey: root-password
         hostKey: nextcloud-host
         databaseKey: nextcloud-database
+        #nextcloud-mysql.nextcloud.svc.cluster.local
     persistence:
       enabled: true
       storageClass: nfs-csi

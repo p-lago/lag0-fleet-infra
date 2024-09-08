@@ -1,7 +1,7 @@
 apiVersion: apps/v1 
 kind: Deployment
 metadata:
-  name: nextcloud-mysql-deployment
+  name: nextcloud-mysql
   labels:
     app: nextcloud-mysql
 spec:
@@ -15,10 +15,8 @@ spec:
     spec:
       nodeSelector:
         kubernetes.io/arch: arm64
-      imagePullSecrets:
-        - name: regcred
       containers:
-      - name: nextcloud-mysql-container
+      - name: nextcloud-mysql
         image: mysql:8.1.0
         env:
           - name: MYSQL_ROOT_PASSWORD
