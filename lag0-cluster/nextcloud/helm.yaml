@@ -1,72 +1,72 @@
-# ---
-# apiVersion: source.toolkit.fluxcd.io/v1beta2
-# kind: HelmRepository
-# metadata:
-#   name: nextcloud
-#   namespace: nextcloud
-# spec:
-#   interval: 24h
-#   url: https://nextcloud.github.io/helm/
-# ---
-# apiVersion: helm.toolkit.fluxcd.io/v2beta1
-# kind: HelmRelease
-# metadata:
-#   name: nextcloud
-#   namespace: nextcloud
-# spec:
-#   releaseName: nextcloud-release
-#   targetNamespace: nextcloud
-#   interval: 30m
-#   chart:
-#     spec:
-#       chart: nextcloud
-#       version: 5.5.4
-#       sourceRef:
-#         kind: HelmRepository
-#         name: nextcloud
-#         namespace: nextcloud
-#       interval: 12h
-#   values:
-#     nextcloud:
-#       trustedDomains: 
-#         - nextcloud.lag0.com.br
-#       # password:
-#       #   valueFrom:
-#       configs:
-#         previews.config.php: |-
-#           <?php
-#           $CONFIG = array (
-#             'enable_previews' => true,
-#             'enabledPreviewProviders' => array (
-#               'OC\Preview\Movie',
-#               'OC\Preview\PNG',
-#               'OC\Preview\JPEG',
-#               'OC\Preview\GIF',
-#               'OC\Preview\BMP',
-#               'OC\Preview\XBitmap',
-#               'OC\Preview\MP3',
-#               'OC\Preview\MP4',
-#               'OC\Preview\TXT',
-#               'OC\Preview\MarkDown',
-#               'OC\Preview\PDF'
-#             ),
-#           );
-#     redis:
-#       enabled: true
-#       global:
-#         storageClass: nfs-csi
-#     cronjob:
-#       enabled: true
-#     internalDatabase:
-#       enabled: true
-#     externalDatabase:
-#       enabled: true
-#     persistence:
-#       enabled: true
-#       storageClass: nfs-csi
-#       nextcloudData:
-#         enabled: true
-#         storageClass: nfs-csi
-#         size: 50Gi
-#     metrics: 
-#       enabled: true
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: HelmRepository
+metadata:
+  name: nextcloud
+  namespace: nextcloud
+spec:
+  interval: 24h
+  url: https://nextcloud.github.io/helm/
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: nextcloud
+  namespace: nextcloud
+spec:
+  releaseName: nextcloud-release
+  targetNamespace: nextcloud
+  interval: 30m
+  chart:
+    spec:
+      chart: nextcloud
+      version: 5.5.4
+      sourceRef:
+        kind: HelmRepository
+        name: nextcloud
+        namespace: nextcloud
+      interval: 12h
+  values:
+    nextcloud:
+      trustedDomains: 
+        - nextcloud.lag0.com.br
+      # password:
+      #   valueFrom:
+      configs:
+        previews.config.php: |-
+          <?php
+          $CONFIG = array (
+            'enable_previews' => true,
+            'enabledPreviewProviders' => array (
+              'OC\Preview\Movie',
+              'OC\Preview\PNG',
+              'OC\Preview\JPEG',
+              'OC\Preview\GIF',
+              'OC\Preview\BMP',
+              'OC\Preview\XBitmap',
+              'OC\Preview\MP3',
+              'OC\Preview\MP4',
+              'OC\Preview\TXT',
+              'OC\Preview\MarkDown',
+              'OC\Preview\PDF'
+            ),
+          );
+    redis:
+      enabled: true
+      global:
+        storageClass: nfs-csi
+    cronjob:
+      enabled: true
+    internalDatabase:
+      enabled: true
+    externalDatabase:
+      enabled: true
+    persistence:
+      enabled: true
+      storageClass: nfs-csi
+      nextcloudData:
+        enabled: true
+        storageClass: nfs-csi
+        size: 50Gi
+    metrics: 
+      enabled: true
