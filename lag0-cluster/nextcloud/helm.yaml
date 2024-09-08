@@ -68,11 +68,6 @@ spec:
         passwordKey: root-password
         hostKey: nextcloud-host
         databaseKey: nextcloud-database
-    # mariadb:
-    #   global:
-    #     defaultStorageClass: nfs-csi
-    #     persistence:
-    #       enabled: true
     persistence:
       enabled: true
       storageClass: nfs-csi
