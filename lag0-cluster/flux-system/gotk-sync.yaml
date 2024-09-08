@@ -20,7 +20,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m0s
-  path: ./free-k8s-cluster
+  path: ./lag0-cluster
   prune: true
   sourceRef:
     kind: GitRepository
