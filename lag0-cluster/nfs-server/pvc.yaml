@@ -8,7 +8,6 @@ spec:
   storageClassName: oci-bv
   accessModes:
   - ReadWriteOnce
-  reclaimPolicy: Retain
   resources:
     requests:
       storage: 100Gi
