@@ -69,10 +69,10 @@ spec:
     persistence:
       enabled: true
       storageClass: nfs-csi
-      size: 8Gi
+      size: 3Gi
       nextcloudData:
         enabled: true
         storageClass: nfs-csi
-        size: 8Gi
+        size: 3Gi
     metrics: 
       enabled: true
