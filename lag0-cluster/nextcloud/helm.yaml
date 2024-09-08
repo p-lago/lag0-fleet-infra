@@ -67,6 +67,6 @@ spec:
       nextcloudData:
         enabled: true
         storageClass: nfs-csi
-        size: 100Gi
+        size: 50Gi
     metrics: 
       enabled: true
