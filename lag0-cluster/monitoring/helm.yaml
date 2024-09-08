@@ -23,8 +23,43 @@ spec:
   chart:
     spec:
       chart: kube-prometheus-stack
+      version: "62.4.0"
       sourceRef:
         kind: HelmRepository
         name: prometheus
         namespace: monitoring
       interval: 12h
+  values:
+    prometheus:
+      prometheusSpec:
+        storageSpec: 
+          volumeClaimTemplate:
+            spec:
+              storageClassName: nfs-csi
+              accessModes: ["ReadWriteOnce"]
+              resources:
+                requests:
+                  storage: 5Gi
+    alertmanager:
+      alertmanagerSpec:
+        storage: 
+          volumeClaimTemplate:
+            spec:
+              storageClassName: nfs-csi
+              accessModes: ["ReadWriteOnce"]
+              resources:
+                requests:
+                  storage: 5Gi
+    grafana:
+      persistence:
+        enabled: true
+        storageClassName: nfs-csi
+        type: sts
+        accessModes: ["ReadWriteOnce"]
+        resources:
+          requests:
+            storage: 5Gi
+        finalizers:
+          - kubernetes.io/pvc-protection
+      env:
+        GF_PANELS_DISABLE_SANITIZE_HTML: "true"
