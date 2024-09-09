@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: nextcloud-mysql
+  name: nextcloud-mysql-service
   labels:
     app: nextcloud-mysql
 spec:
