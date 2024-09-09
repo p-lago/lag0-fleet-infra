@@ -15,6 +15,7 @@ spec:
           containers:
           - name: mysqldump-s3-backup
             image: d3fk/mysql-s3-backup:latest
+            imagePullPolicy: IfNotPresent
             env:
             - name: AWS_ACCESS_KEY_ID
               valueFrom:
@@ -50,7 +51,7 @@ spec:
             volumeMounts:
             - name: s3config-hourly
               mountPath: /root/.s3cfg
-              subPath: .s3cfg 
+              subPath: .s3cfg
           volumes:
           - name: s3config-hourly
             configMap:
