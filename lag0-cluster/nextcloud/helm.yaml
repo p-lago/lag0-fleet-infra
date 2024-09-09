@@ -89,6 +89,12 @@ spec:
       initialDelaySeconds: 60
       periodSeconds: 30
       failureThreshold: 10
+    rbac:
+      enabled: true
+      serviceaccount:
+        create: true
+        name: nextcloud-serviceaccount
+        annotations: {}
     # resources:
     #   requests:
     #     # hugepages-2Mi: 500Mi
