@@ -16,6 +16,7 @@ spec:
           containers:
           - name: mysqldump-s3-backup
             image: d3fk/mysql-s3-backup:latest
+            imagePullPolicy: IfNotPresent
             env:
             - name: AWS_ACCESS_KEY_ID
               valueFrom:
