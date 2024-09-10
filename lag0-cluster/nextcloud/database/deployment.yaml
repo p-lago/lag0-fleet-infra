@@ -24,9 +24,9 @@ spec:
           valueFrom:
             secretKeyRef:
               name: mysql-db
-              key: nextcloud-host
-        # ports:
-        # - containerPort: 3306
+              key: root-user
+        ports:
+        - containerPort: 3306
         #   hostPort: 3306
         resources:
           limits:
