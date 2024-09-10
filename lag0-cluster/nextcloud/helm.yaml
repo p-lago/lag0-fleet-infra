@@ -1,4 +1,3 @@
----
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: HelmRepository
 metadata:
@@ -28,8 +27,9 @@ spec:
       interval: 12h
   values:
     nextcloud:
-      trustedDomains: 
-        - nextcloud.lag0.com.br
+      host: nextcloud.lag0.com.br
+      trustedDomains:
+      - nextcloud.lag0.com.br
       # password:
       #   valueFrom:
       configs:
@@ -78,7 +78,7 @@ spec:
         enabled: true
         storageClass: nfs-csi
         size: 3Gi
-    metrics: 
+    metrics:
       enabled: true
     startupProbe:
       enabled: true
@@ -96,13 +96,13 @@ spec:
         name: nextcloud-serviceaccount
         annotations: {}
     # resources:
-    #   requests:
-    #     # hugepages-2Mi: 500Mi
-    #     # memory: 500Mi
-    #     ephemeral-storage: "20Gi"
-    #   limits:
-    #     # limit and request must be the same for hugepages. They are a fixed resource.
-    #     # hugepages-2Mi: 500Mi
-    #     # note that Kubernetes currently requires cpu or memory requests and limits before hugepages are allowed.
-    #     # memory: 1Gi
-    #     ephemeral-storage: "40Gi"
+#   requests:
+#     # hugepages-2Mi: 500Mi
+#     # memory: 500Mi
+#     ephemeral-storage: "20Gi"
+#   limits:
+#     # limit and request must be the same for hugepages. They are a fixed resource.
+#     # hugepages-2Mi: 500Mi
+#     # note that Kubernetes currently requires cpu or memory requests and limits before hugepages are allowed.
+#     # memory: 1Gi
+#     ephemeral-storage: "40Gi"
