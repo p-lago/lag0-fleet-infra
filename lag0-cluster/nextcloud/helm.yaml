@@ -27,6 +27,8 @@ spec:
       interval: 12h
   values:
     nextcloud:
+      username: antonio
+      password: testpass12345
       host: nextcloud.lag0.com.br
       trustedDomains:
       - nextcloud.lag0.com.br
