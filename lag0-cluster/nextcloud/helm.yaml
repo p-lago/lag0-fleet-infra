@@ -36,8 +36,6 @@ spec:
       host: nextcloud.lag0.com.br
       trustedDomains:
       - nextcloud.lag0.com.br
-      # password:
-      #   valueFrom:
       configs:
         previews.config.php: |-
           <?php
@@ -56,6 +54,9 @@ spec:
               'OC\Preview\MarkDown',
               'OC\Preview\PDF'
             ),
+            'overwrite.cli.url' => 'https://nextcloud.lag0.com.br',
+            'overwriteprotocol' => 'https',
+            'forwarded_for_headers' => array('HTTP_X_FORWARDED_FOR'),
           );
     redis:
       enabled: true
