@@ -6,7 +6,7 @@ metadata:
 spec:
   interval: 1m0s
   path: ./cs16-surf/infra/production
-  prune: true
+  prune: false
   force: true
   sourceRef:
     kind: GitRepository
