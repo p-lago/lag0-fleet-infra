@@ -1,5 +1,4 @@
----
-apiVersion: source.toolkit.fluxcd.io/v1beta2
+apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
   name: prometheus
@@ -32,7 +31,7 @@ spec:
   values:
     prometheus:
       prometheusSpec:
-        storageSpec: 
+        storageSpec:
           volumeClaimTemplate:
             spec:
               storageClassName: nfs-csi
@@ -42,7 +41,7 @@ spec:
                   storage: 5Gi
     alertmanager:
       alertmanagerSpec:
-        storage: 
+        storage:
           volumeClaimTemplate:
             spec:
               storageClassName: nfs-csi
@@ -60,6 +59,6 @@ spec:
           requests:
             storage: 5Gi
         finalizers:
-          - kubernetes.io/pvc-protection
+        - kubernetes.io/pvc-protection
       env:
         GF_PANELS_DISABLE_SANITIZE_HTML: "true"
