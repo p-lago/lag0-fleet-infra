@@ -6,8 +6,8 @@ metadata:
 spec:
   interval: 1m0s
   path: ./cs16-surf/infra/production
-  prune: true
-  force: true
+  prune: false
+  force: false
   sourceRef:
     kind: GitRepository
     name: lag0-fleet-manifests-git
