@@ -1,0 +1,13 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: cs16-surf-2
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  path: ./cs16-surf-2/infra/production
+  prune: true
+  force: true
+  sourceRef:
+    kind: GitRepository
+    name: lag0-fleet-manifests-git
