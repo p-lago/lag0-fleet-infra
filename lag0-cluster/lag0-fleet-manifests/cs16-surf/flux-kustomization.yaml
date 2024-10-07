@@ -4,6 +4,7 @@ metadata:
   name: cs16-surf
   namespace: flux-system
 spec:
+  suspend: true
   interval: 1m0s
   path: ./cs16-surf/infra/production
   prune: true
