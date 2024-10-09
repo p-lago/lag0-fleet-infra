@@ -4,7 +4,7 @@ metadata:
   name: zomboid-server-1
   namespace: flux-system
 spec:
-  suspend: false
+  suspend: true
   interval: 30s
   path: ./zomboid-server-1/infra/production
   prune: true
