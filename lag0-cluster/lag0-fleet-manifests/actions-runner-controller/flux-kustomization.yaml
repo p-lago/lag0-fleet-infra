@@ -6,7 +6,7 @@ metadata:
 spec:
   suspend: false
   interval: 30s
-  path: ./actions-runner-controller/infra/production
+  path: ./actions-runner-controller
   prune: true
   force: true
   sourceRef:
