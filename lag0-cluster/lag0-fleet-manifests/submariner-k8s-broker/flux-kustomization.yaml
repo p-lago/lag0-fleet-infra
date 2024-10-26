@@ -1,11 +1,11 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: submariner
+  name: submariner-k8s-broker
   namespace: flux-system
 spec:
   interval: 1m0s
-  path: ./submariner
+  path: ./submariner-k8s-broker
   prune: false
   force: false
   sourceRef:
