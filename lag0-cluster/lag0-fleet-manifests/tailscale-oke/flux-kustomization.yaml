@@ -1,13 +1,13 @@
-apiVersion: kustomize.toolkit.fluxcd.io/v1
-kind: Kustomization
-metadata:
-  name: tailscale-oke
-  namespace: flux-system
-spec:
-  interval: 1m0s
-  path: ./tailscale-oke
-  prune: false
-  force: false
-  sourceRef:
-    kind: GitRepository
-    name: lag0-fleet-manifests-git
+# apiVersion: kustomize.toolkit.fluxcd.io/v1
+# kind: Kustomization
+# metadata:
+#   name: tailscale-oke
+#   namespace: flux-system
+# spec:
+#   interval: 1m0s
+#   path: ./tailscale-oke
+#   prune: false
+#   force: false
+#   sourceRef:
+#     kind: GitRepository
+#     name: lag0-fleet-manifests-git
