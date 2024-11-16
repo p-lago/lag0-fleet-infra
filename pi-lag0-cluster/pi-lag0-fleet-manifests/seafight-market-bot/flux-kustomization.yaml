@@ -6,7 +6,7 @@ metadata:
 spec:
   interval: 1m0s
   path: ./seafight-market-bot
-  prune: false
+  prune: true
   force: false
   sourceRef:
     kind: GitRepository
