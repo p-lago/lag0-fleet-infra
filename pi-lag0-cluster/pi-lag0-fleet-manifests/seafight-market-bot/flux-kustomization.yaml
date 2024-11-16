@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m0s
-  path: ./seafight-market-bot
+  path: ./seafight-market-bot/infra/production
   prune: true
   force: false
   sourceRef:
