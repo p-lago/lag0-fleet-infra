@@ -4,7 +4,7 @@ metadata:
   name: external-secrets
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 2m0s
   path: ./external-secrets
   prune: false
   force: false

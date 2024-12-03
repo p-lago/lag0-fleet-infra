@@ -4,7 +4,7 @@ metadata:
   name: weave-gitops
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 10m0s
   path: ./weave-gitops-pi
   prune: false
   force: false

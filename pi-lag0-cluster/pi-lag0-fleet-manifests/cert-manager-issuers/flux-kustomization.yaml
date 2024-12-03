@@ -4,7 +4,7 @@ metadata:
   name: cert-manager-issuers
   namespace: flux-system
 spec:
-  interval: 1m0s
+  interval: 10m0s
   path: ./cert-manager-issuers
   prune: false
   force: false
