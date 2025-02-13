@@ -1,5 +1,5 @@
 ## This repository is used by FluxCD to sync applications on my cloud. 
-Manifests are in https://github.com/antoniolago/lag0-fleet-manifests.
+This contains OKE setup files using terraform and reference manifests for which environment application manifests will be synced, these application manifests are in https://github.com/antoniolago/lag0-fleet-manifests.
 
 - setup_oci-infra -> contains terraform files in order to create the initial infrastructure on ORACLE CLOUD INFRASTRUCTURE, all services provided in this repository are included in Oracle's generous FREE TIER.
 - lag0-cluster -> contains the reference for manifests to be synced in Oracle Kubernetes Engine (OKE).
