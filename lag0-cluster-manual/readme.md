@@ -1,1 +1,2 @@
-In order to avoid losing core objects from k8s (and data) in case of errors or unninstall of flux, this folder contains some components that can NOT be deleted in order to be able to automatically recover everything
+This repository is used by FluxCD to sync applications on my cloud.
+Manifests are in https://github.com/antoniolago/lag0-fleet-manifests
