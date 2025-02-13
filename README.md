@@ -5,7 +5,7 @@ Manifests are in https://github.com/antoniolago/lag0-fleet-manifests.
 - lag0-cluster -> contains the reference for manifests to be synced in Oracle Kubernetes Engine (OKE).
 - pi-lag0-cluster -> contains the reference for manifests to be synced in my Raspberry Pi 4 at home.
 
-# Below is the documentation of the original fork.
+# Below is the documentation of the Eficode's fork.
 
 ## Free Kubernetes cluster on Oracle Cloud with Terraform - Eficode modifications
 
