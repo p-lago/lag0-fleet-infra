@@ -5,6 +5,8 @@ This contains terraform files for bootstrapping OKE on Oracle Cloud and also con
 - lag0-cluster -> contains the reference for manifests to be synced in Oracle Kubernetes Engine (OKE).
 - pi-lag0-cluster -> contains the reference for manifests to be synced in my Raspberry Pi 4 at home.
 
+**Commits names are gibbrish for sanity reasons.
+
 # Below is the documentation of the Eficode's fork.
 
 ## Free Kubernetes cluster on Oracle Cloud with Terraform - Eficode modifications
