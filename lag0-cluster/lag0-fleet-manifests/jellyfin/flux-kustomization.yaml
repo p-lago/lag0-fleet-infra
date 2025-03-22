@@ -4,6 +4,7 @@ metadata:
   name: jellyfin
   namespace: flux-system
 spec:
+  suspend: true
   interval: 1m0s
   path: ./jellyfin
   prune: false

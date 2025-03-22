@@ -4,6 +4,7 @@ metadata:
   name: strimzi-kafka-operator
   namespace: flux-system
 spec:
+  suspend: true
   interval: 1m0s
   path: ./strimzi-kafka-operator
   prune: false

@@ -4,6 +4,7 @@ metadata:
   name: mailu
   namespace: flux-system
 spec:
+  suspend: true
   interval: 1m0s
   path: ./mailu
   prune: false

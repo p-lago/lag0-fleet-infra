@@ -4,6 +4,7 @@ metadata:
   name: alluxio
   namespace: flux-system
 spec:
+  suspend: true
   interval: 1m0s
   path: ./alluxio-oke
   prune: false
