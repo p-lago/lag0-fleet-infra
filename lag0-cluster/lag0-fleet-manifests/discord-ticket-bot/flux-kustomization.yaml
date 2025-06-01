@@ -4,6 +4,7 @@ metadata:
   name: discord-ticket-bot
   namespace: flux-system
 spec:
+  suspend: true
   interval: 1m0s
   path: ./discord-ticket-bot
   prune: false
