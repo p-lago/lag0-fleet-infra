@@ -1,12 +1,11 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: nextcloud
+  name: kubero-operator
   namespace: flux-system
 spec:
-  suspend: true
   interval: 1m0s
-  path: ./nextcloud
+  path: ./kubero-operator
   prune: false
   force: false
   sourceRef:

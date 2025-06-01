@@ -1,12 +1,12 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
-  name: nextcloud
+  name: strimzi-kafka-operator
   namespace: flux-system
 spec:
   suspend: true
   interval: 1m0s
-  path: ./nextcloud
+  path: ./strimzi-kafka-operator
   prune: false
   force: false
   sourceRef:
